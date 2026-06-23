@@ -1,0 +1,18 @@
+I want to deploy this on GitHub Pages at:
+https://amal123salam-hash.github.io/Devotion-app/
+
+Problems to fix:
+1. Remove server.ts backend completely
+2. Move all Gemini API calls to frontend directly
+3. Fix vite.config.ts base to '/Devotion-app/'
+4. Fix index.html to load built JS files correctly
+5. Fix sw.js path to '/Devotion-app/sw.js'
+6. Make sure npm run build works correctly
+7. Update deploy.yml to build and deploy properly
+
+Make this a pure static frontend app that 
+works on GitHub Pages with Gemini API 
+called directly from the browser.
+
+My Gemini API Key will be stored as 
+GitHub Secret: GEMINI_API_KEY

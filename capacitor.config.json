@@ -1,0 +1,8 @@
+{
+  "appId": "com.christcounsel.app",
+  "appName": "ChristCounsel",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}

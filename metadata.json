@@ -1,0 +1,6 @@
+{
+  "name": "ChristCounsel AI",
+  "description": "A high-fidelity spiritual devotion and AI pastoral counsel guide powered by Gemini, featuring Scripture readings, live media, and daily prayer alarms.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
