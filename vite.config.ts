@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: process.env.BUILD_FOR_ANDROID === 'true' ? './' : '/Devotion-app/',
+    base: process.env.BUILD_FOR_ANDROID === 'true' ? './' : '/devotion-app/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
