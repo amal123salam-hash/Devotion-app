@@ -3,6 +3,8 @@ import { motion } from "motion/react";
 import { Menu, User, BookOpen, Quote, Shield, Compass, Heart } from "lucide-react";
 import { bibleQuotes } from "../data";
 
+import christDevotionalPortrait from "../assets/images/christ_devotional_portrait_1782136426209.jpg";
+
 interface HomeScreenProps {
   onNavigate: (screen: string) => void;
   userAvatar: string;
@@ -54,7 +56,7 @@ export default function HomeScreen({ onNavigate, userAvatar, onOpenSidebar }: Ho
           {/* Cover Image of Jesus Christ - Warm Pastoral Light */}
           <img 
             id="cover_art_image" 
-            src="/src/assets/images/christ_devotional_portrait_1782136426209.jpg" 
+            src={christDevotionalPortrait} 
             alt="Spiritual Devotion Guidance" 
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-[6s] ease-out"
