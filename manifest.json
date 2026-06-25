@@ -25,7 +25,7 @@
     },
     {
       "src": "/devotion-app/assets/icons/icon-512x512.png",
-      "sizes": "512x512",
+      "sizes": "1280x1280",
       "type": "image/png",
       "purpose": "maskable"
     }
