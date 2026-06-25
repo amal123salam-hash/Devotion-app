@@ -16,6 +16,53 @@
   "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
   "prefer_related_applications": false,
   "related_applications": [],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "share_target": {
+    "action": "/devotion-app/share",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "permissions_policy": {
+    "notifications": ["self"],
+    "push": ["self"]
+  },
+  "features": [
+    "Cross Platform",
+    "fast",
+    "simple"
+  ],
+  "shortcuts": [
+    {
+      "name": "Daily Devotion",
+      "short_name": "Devotion",
+      "description": "Open today's devotion",
+      "url": "/devotion-app/devotion",
+      "icons": [
+        {
+          "src": "/devotion-app/assets/icons/icon_192x192.png",
+          "sizes": "480x480"
+        }
+      ]
+    },
+    {
+      "name": "AI Counsel",
+      "short_name": "Counsel",
+      "description": "Get AI Christian counsel",
+      "url": "/devotion-app/counsel",
+      "icons": [
+        {
+          "src": "/devotion-app/assets/icons/icon_192x192.png",
+          "sizes": "480x480"
+        }
+      ]
+    }
+  ],
   "icons": [
     {
       "src": "/devotion-app/assets/icons/icon_192x192.png",
@@ -46,7 +93,7 @@
     },
     {
       "src": "/devotion-app/assets/screenshots/screenshot-desktop.png",
-      "sizes": "1280x791",
+      "sizes": "1280x800",
       "type": "image/png",
       "form_factor": "wide",
       "label": "ChristCounsel AI on desktop"
