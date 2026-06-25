@@ -6,10 +6,16 @@
   "start_url": "/devotion-app/",
   "scope": "/devotion-app/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
   "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#4f46e5",
   "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "lifestyle", "spirituality"],
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+  "prefer_related_applications": false,
+  "related_applications": [],
   "icons": [
     {
       "src": "/devotion-app/assets/icons/icon_192x192.png",
