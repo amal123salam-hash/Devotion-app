@@ -1,18 +1,29 @@
-I want to deploy this on GitHub Pages at:
-https://amal123salam-hash.github.io/Devotion-app/
+Please modify our repository to upgrade the "Counsel" feature. I want to implement a dynamic system where the user interacts with an interface and receives counsel written and spoken in the voice of Jesus Christ.
 
-Problems to fix:
-1. Remove server.ts backend completely
-2. Move all Gemini API calls to frontend directly
-3. Fix vite.config.ts base to '/Devotion-app/'
-4. Fix index.html to load built JS files correctly
-5. Fix sw.js path to '/Devotion-app/sw.js'
-6. Make sure npm run build works correctly
-7. Update deploy.yml to build and deploy properly
+Here are the requirements for the changes:
 
-Make this a pure static frontend app that 
-works on GitHub Pages with Gemini API 
-called directly from the browser.
+1. DATA STORE:
+- Create a structured data file (e.g., `src/data/quotesData.js` or `ts` depending on our project setup) containing a collection of Bible quotes (seed it with at least 5-10 distinct examples, and make it easily extendable to 100).
+- Each quote object must have: `id`, `text`, `reference` (e.g., "Matthew 11:28"), and an array of `keywords` (e.g., ["tired", "anxious", "peace", "lonely"]).
 
-My Gemini API Key will be stored as 
-GitHub Secret: GEMINI_API_KEY
+2. MATCHING LOGIC:
+- When the user sends a message, scan the input text against the keywords in the quotes data.
+- If a keyword matches, select that quote. If multiple quotes match, pick one randomly from the matches.
+- FALLBACK: If no keywords match the user's input, randomly pick any quote from the entire collection.
+
+3. PERSONA WRAPPER:
+- Wrap the chosen quote inside a compassionate, first-person response from Jesus. 
+- Use random comforting conversational intros (e.g., "My child, hear my words...") and outros (e.g., "Remember, I am with you always.") so the responses feel natural and dynamic.
+
+4. VOICE ENGINE (TTS):
+- Integrate Text-to-Speech using the native Web Speech API (`window.speechSynthesis`).
+- Configure the utterance parameters to use a warm, deep, or natural male voice if available on the system.
+- Tweak the `pitch` (slightly lower) and `rate` (slightly slower/calmer) to ensure a serene, comforting delivery.
+- Ensure `speechSynthesis.cancel()` is called before playing a new response so audio clips don't overlap.
+
+5. UI INTEGRATION:
+- Locate the existing Counsel component interface in our codebase.
+- Connect this new matching and audio logic to the chat submission handler.
+- When a response is received, display the full framed text in the chat bubble and automatically trigger the voice audio.
+
+Please scan the repo to locate the current Counsel feature files, propose the exact file edits, and implement these changes cleanly. Ensure everything compiles and matches our existing styling conventions.
